@@ -1,0 +1,180 @@
+/* Mobile First Responsive Design */
+
+/* Small Devices (640px and up) */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+  
+  .grid-cols-sm-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-sm-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-sm-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-sm-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .header-content {
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+  
+  .search-container {
+    padding: var(--spacing-xl);
+  }
+  
+  .detail-header {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+  
+  .detail-body {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+}
+
+/* Medium Devices (768px and up) */
+@media (min-width: 768px) {
+  .grid-cols-md-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-md-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-md-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-md-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .stats-container {
+    flex-wrap: nowrap;
+  }
+  
+  .detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .table {
+    min-width: 100%;
+  }
+  
+  .table-wrapper {
+    overflow-x: visible;
+  }
+}
+
+/* Large Devices (1024px and up) */
+@media (min-width: 1024px) {
+  .grid-cols-lg-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-lg-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-lg-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-lg-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .detail-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .page-content {
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+/* Extra Large Devices (1280px and up) */
+@media (min-width: 1280px) {
+  .grid-cols-xl-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-xl-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-xl-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-xl-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* 2XL Devices (1536px and up) */
+@media (min-width: 1536px) {
+  .grid-cols-2xl-1 { grid-template-columns: repeat(1, 1fr); }
+  .grid-cols-2xl-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-2xl-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-2xl-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Landscape Orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+  .detail-header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+  
+  .detail-header-content {
+    gap: var(--spacing-lg);
+  }
+  
+  .detail-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: var(--text-xl);
+  }
+  
+  .detail-title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .user-avatar,
+  .detail-avatar {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .search-container,
+  .back-button {
+    display: none;
+  }
+  
+  .page {
+    background-color: white;
+  }
+  
+  .table-container,
+  .detail-card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .table tbody tr:hover {
+    background-color: transparent;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --bg-tertiary: #374151;
+    --border-primary: #374151;
+    --border-secondary: #4b5563;
+  }
+  
+  .table th {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .table tbody tr:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  .search-input {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+  
+  .search-input:focus {
+    background-color: var(--bg-primary);
+  }
+}
