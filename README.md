@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# 📊 BuyerForeSight Frontend Assignment – User Directory Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Project Overview
 
-## Available Scripts
+This project is a **User Directory Dashboard** built as part of a frontend assessment.
+It fetches user data from a public API and displays it in a clean, interactive UI with search, sorting, and detailed user views.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌐 API Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://jsonplaceholder.typicode.com/users
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* React.js
+* JavaScript (ES6+)
+* CSS (Modular structure)
+* Fetch API / Axios
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📋 Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Displays users in a **table/grid format**
+* Shows:
 
-### `npm run eject`
+  * Name
+  * Email
+  * Phone
+  * Company
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔍 Search
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Search users by:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  * Name
+  * Email
+* Instant client-side filtering
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔃 Sorting
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Sort users by:
 
-### Code Splitting
+  * Name
+  * Company
+* Supports:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  * Ascending ↑
+  * Descending ↓
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 👤 User Detail Page
 
-### Making a Progressive Web App
+* Click on any user row to view details
+* Displays complete user information:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  * Name
+  * Username
+  * Email
+  * Phone
+  * Website
+  * Address
+  * Company details
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📁 Folder Structure
 
-### Deployment
+```
+src/
+├── styles/
+│   ├── variables.css
+│   ├── base.css
+│   ├── components.css
+│   ├── layout.css
+│   └── responsive.css
+├── components/
+│   ├── UserDashboard.js
+│   ├── UserDetail.js
+│   └── UserRow.js
+├── services/
+│   └── api.js
+├── App.js
+└── index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## ⚙️ Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Clone the repository
+
+```
+git clone https://github.com/BabithaReddy7/User-Dashboard.git
+cd User-Dashboard
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run the application
+
+```
+npm start
+```
+
+---
+
+## 📦 Build for Production
+
+```
+npm run build
+```
+
+---
+
+## 🎯 Key Highlights
+
+* Clean and modular folder structure
+* Reusable components
+* Responsive design
+* Optimized client-side operations (search & sort)
+
+---
+
+## 📌 Future Improvements
+
+* Pagination
+* API error handling UI
+* Loading skeletons
+* Dark mode support
+
+---
+
